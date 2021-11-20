@@ -1,80 +1,88 @@
+*{
+    margin: 0;
+    padding:0;
+}
 body{
-    margin: 100px 55px 10px 294px;
-
+    display: flex;
+    justify-content: space-evenly;
     background-color: #ffe6e6;
 }
-#container
-{   width: 80%;
-    align-items: center;
-    align-content: center;
-    border-radius: 2em;
-
-    height: 500px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-
-}
-#h1-left{
-    color: darkslategrey;
-    display: block;
-    text-align: center;
-    padding-bottom:10px;
-
-}
-#left{
-   
-    margin-top: 15px;
-    margin-inline: 24px;
-    padding-left: 20px ;
-    background-color: white;
-    width: 40%;
+.container{
+    background-color: #FFFFFf;
     display: flex;
-    float: left;
+    justify-content: space-around;
+    border-radius: 1em;
+    top:50px;
+    position:relative;
+    padding:20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #FFFFFf;
+    padding: 50px;
 
 }
-#right{
-    padding-top: 30px;
-    margin-right: 20px;
-    display:flex;
-    float: right;
-    align-content: center;
-}
-#labels{
-    margin-left: 10px;
-    margin-top: 4px;
-    width: 50%;
-    float: left;
-}
-#name,#confirm-password,#email,#password
-{
-    border-collapse: collapse;
-    border-left: none ;
-    border-right: none ;
-    border-top: none ;
-    border-bottom: 2px solid red;
-}
-#button
-{
-    font-size: larger ;
-    align-content: center;
-    text-align: center;
-    height: 2em;
-    border: 20px;
-    margin-right: 10px;
-    background-color: #2f4f4f;
-    border: none;
-    border-radius: 2px ;
-    display: block;
-    float: right;
-    size: 200px;
-}
-#button:hover
-{   color: black;
-    background-color: #5ac711;
+label{
+    padding-left: 0;
 }
 img{
-    border-radius: 20px;
-    width: 100%;
-    height: 450px;
+    width:50%;
+}
+input{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid red;
+    margin-left: 10%;
+}
+p{
+    display: flex;
+    justify-content: space-between;
+}
+#check{
+    padding: 0;
+    margin-left: 0;
+}
+#h1-left{
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .container{
+        flex-direction: column;
+        width: max-content;
+    }
+    input{
+        margin-left: 0;
+    }
+    .form{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    img{
+        width: 100%;
+    }
+    h1{
+        margin-bottom: 20px;
+    }
+    button{
+        border-radius: 10px;
+        color: #FFFFFf;
+        padding: 10px 20px;
+        font-size: large;
+        align-self: center;
+        background-color: #e63167;
+        border: none;
+        margin-top: 20px;
+    }
+    p{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    label{
+        font-size: larger;
+    }
 
 }
